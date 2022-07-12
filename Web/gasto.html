@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+    
+        <title>Condominios</title>
+    
+        <!-- Custom fonts for this template-->
+        <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+        <link
+            href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+            rel="stylesheet">
+    
+        <!-- Custom styles for this template-->
+        <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    </head>
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+                <div class="sidebar-brand-icon">
+                    <i class="fas fa-building"></i>
+                </div>
+                <div class="sidebar-brand-text mx-1">Condominios <sup>v1</sup></div>
+            </a>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                Gastos
+            </div>
+
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link" href="gasto.html">
+                    <i class="fas fa-coins"></i>
+                    <span>Gestión de Gastos</span>
+                </a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                Reservas
+            </div>
+
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link" href="reserva.html">
+                    <i class="fa fa-calendar-alt"></i>
+                    <span>Reservar Áreas</span>
+                </a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                Recibos
+            </div>
+
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link" href="recibo.html">
+                    <i class="fas fa-file-invoice-dollar"></i>
+                    <span>Consultar Recibos</span>
+                </a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider d-none d-md-block">
+
+            <!-- Sidebar Toggler (Sidebar) -->
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+        </ul>
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                    <!-- Page Heading -->
+                    <h1 class="h3 mb-2 text-gray-800">Gestión de Gastos</h1>
+
+                    <!-- Topbar Navbar -->
+                    <ul class="navbar-nav ml-auto">
+
+                        <div class="topbar-divider d-none d-sm-block"></div>
+
+                        <!-- Nav Item - User Information -->
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
+                                <img class="img-profile rounded-circle"
+                                    src="img/undraw_profile.svg">
+                            </a>
+                            <!-- Dropdown - User Information -->
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="userDropdown">
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Profile
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Settings
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Activity Log
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Logout
+                                </a>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                </nav>
+                <!-- End of Topbar -->
+                
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+                    <ul class="nav nav-tabs mb-4" id="myTab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" data-toggle="tab" href="#tab-test-01">Consultar</a>
+                        </li>
+                    
+                        <li class="nav-item">
+                            <a class="nav-link"  data-toggle="tab" href="#tab-test-02">Registrar</a>
+                        </li>
+                    </ul>
+                    
+                    <div class="tab-content" id="myTabContent">
+                    
+                        <div class="tab-pane fade show active" id="tab-test-01">
+                            <form>
+                                <div class="form-row">
+                                  <div class="form-group col-md-4">
+                                    <label for="iptProveedor1">Proveedor</label>
+                                    <div class="input-group">
+                                        <input id="iptIdProveedor1" type="hidden" />
+                                        <input id="iptProveedor1" type="text" class="form-control " aria-label="Search"
+                                            aria-describedby="basic-addon2" disabled>
+                                        <div class="input-group-append">
+                                            <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#basicExampleModal">
+                                                <i class="fas fa-search fa-sm"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                  </div>
+                                  <div class="form-group col-md-4">
+                                    <label for="iptFechaGasto1">Fecha Gasto</label>
+                                    <input id="iptFechaGasto1" class="form-control py-2 border-right-0 border" type="date">
+                                  </div>
+                                  <div class="form-group col-md-4">
+                                    <label for="iptFechaVencimiento1">Fecha Vencimiento</label>
+                                    <input id="iptFechaVencimiento1" class="form-control py-2 border-right-0 border" type="date">
+                                  </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-4">
+                                        <label for="cboCondominio1">Condominio</label>
+                                        <select id="cboCondominio1" class="form-control" onchange="javascript:fnCargarTorres(1, this.value);">
+                                            <option selected>Seleccionar</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <label for="cboTorre1">Torre</label>
+                                        <select id="cboTorre1" class="form-control" onchange="javascript:fnCargarDepartamentos(1, this.value);">
+                                            <option selected>Seleccionar</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <label for="cboDepartamento1">Departamento</label>
+                                        <select id="cboDepartamento1" class="form-control">
+                                            <option selected>Seleccionar</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <!-- Divider -->
+                                <hr class="sidebar-divider">
+
+                                <div class="form-row">
+                                    <div class="form-group col-md-4">
+                                      <label for="iptDescripcion1">Descripción</label>
+                                      <input id="iptDescripcion1" type="text" class="form-control" disabled>
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                      <label for="iptTipoGasto1">Tipo de Gasto</label>
+                                      <input type="text" class="form-control" id="iptTipoGasto1" disabled>
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <label for="iptTipoCalculo1">Tipo de Cálculo</label>
+                                        <input type="text" class="form-control" id="iptTipoCalculo1" disabled>
+                                      </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-4">
+                                        <label for="iptMonto1">Monto</label>
+                                        <input type="text" class="form-control" id="iptMonto1" disabled>
+                                    </div>
+                                </div>
+
+                                <input type="button" id="btConsultar" class="btn btn-primary" value="Consultar" onclick="javascript:fnConsultarGasto();" />
+                            </form>
+                        </div>
+                    
+                        <div class="tab-pane fade" id="tab-test-02">
+                            <form>
+                                <div class="form-row">
+                                  <div class="form-group col-md-4">
+                                    <label for="iptProveedor2">Proveedor</label>
+                                    <div class="input-group">
+                                        <input id="iptIdProveedor2" type="hidden" />
+                                        <input id="iptProveedor2" type="text" class="form-control " aria-label="Search"
+                                            aria-describedby="basic-addon2" disabled>
+                                        <div class="input-group-append">
+                                            <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#basicExampleModal">
+                                                <i class="fas fa-search fa-sm"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                  </div>
+                                  <div class="form-group col-md-4">
+                                    <label for="iptFechaGasto2">Fecha Gasto</label>
+                                    <input id="iptFechaGasto2" class="form-control py-2 border-right-0 border" type="date">
+                                  </div>
+                                  <div class="form-group col-md-4">
+                                    <label for="iptFechaVencimiento2">Fecha Vencimiento</label>
+                                    <input id="iptFechaVencimiento2" class="form-control py-2 border-right-0 border" type="date">
+                                  </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-4">
+                                        <label for="cboCondominio2">Condominio</label>
+                                        <select id="cboCondominio2" class="form-control" onchange="javascript:fnCargarTorres(2, this.value);">
+                                            <option selected>Seleccionar</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <label for="cboTorre2">Torre</label>
+                                        <select id="cboTorre2" class="form-control" onchange="javascript:fnCargarDepartamentos(2, this.value);">
+                                            <option selected>Seleccionar</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <label for="cboDepartamento2">Departamento</label>
+                                        <select id="cboDepartamento2" class="form-control">
+                                            <option selected>Seleccionar</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-4">
+                                      <label for="iptDescripcion2">Descripción</label>
+                                      <input type="text" class="form-control" id="iptDescripcion2">
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <label for="cboTipoGasto2">Tipo de Gasto</label>
+                                        <select id="cboTipoGasto2" class="form-control">
+                                            <option selected>Seleccionar</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <label for="cboTipoCalculo2">Tipo de Cálculo</label>
+                                        <select id="cboTipoCalculo2" class="form-control">
+                                            <option selected>Seleccionar</option>
+                                        </select>
+                                    </div>
+                                  </div>
+                                  <div class="form-row">
+                                    <div class="form-group col-md-4">
+                                      <label for="iptMonto2">Monto</label>
+                                      <input type="text" class="form-control" id="iptMonto2">
+                                    </div>
+                                  </div>
+
+                                <input type="button" id="btRegistrar" class="btn btn-primary" value="Registrar" onclick="javascript:fnRegistrarGasto();" />
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.container-fluid -->
+
+            </div>
+            <!-- End of Main Content -->
+
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; Your Website 2021</span>
+                    </div>
+                </div>
+            </footer>
+            <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" href="login.html">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="basicExampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Proveedores</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-row">
+                        <div class="form-group col-md-6 mb-1">
+                            <div class="input-group mb-1">
+                                <input type="text" class="form-control input-text" placeholder="Razón Social" id="iptRazonSocial">
+                                <div class="input-group-append">
+                                  <button class="btn btn-outline-warning" type="button" onclick="javascript:fnListarProveedores();"><i class="fa fa-search"></i></button>
+                                </div>
+                              </div>
+                        </div>
+                    </div>
+
+                    <div class="table-responsive">
+                        <table id="tbProveedores" class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                            <thead>
+                                <tr>
+                                    <th>_</th>
+                                    <th>Id</th>
+                                    <th>Razón Social</th>
+                                    <th>Tipo Doc</th>
+                                    <th>Núm Doc</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td colspan="5">No existen registros</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" onclick="javascript:fnSeleccionarProveedor();">Seleccionar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="js/gasto.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+    
+</body>
+
+</html>
